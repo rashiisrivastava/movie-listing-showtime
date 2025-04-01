@@ -4,7 +4,7 @@
 This is a simple and interactive **Movie Ticket Booking System** built with **HTML, CSS, and JavaScript**. It lets you pick a movie, choose a showtime, select your seats, and book tickets—all in a clean and user-friendly interface.  
 
 ## 🚀 Live Demo  
-🔗 **Check it out here:**   
+🔗 **Check it out here:**   http://cinego.vercel.app/
 
 ## ✨ Features  
 ✅ **Choose a Movie** – Pick from a selection of movies  
