@@ -58,6 +58,14 @@
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .confirmation {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -89,6 +97,8 @@
     <h2>🎟 Booked Tickets:</h2>
     <ul id="bookingList"></ul>
 
+    <div id="confirmationMessage" class="confirmation" style="display:none;">Your booking was successful!</div>
+
     <script>
         function bookTickets() {
             let name = document.getElementById('name').value.trim();
@@ -109,9 +119,18 @@
             // Append the new booking to the list
             bookingList.appendChild(newBooking);
 
+            // Show a confirmation message
+            let confirmationMessage = document.getElementById('confirmationMessage');
+            confirmationMessage.style.display = 'block';
+
             // Clear input fields after booking
             document.getElementById('name').value = "";
             document.getElementById('tickets').value = "";
+
+            // Hide confirmation after 5 seconds
+            setTimeout(function() {
+                confirmationMessage.style.display = 'none';
+            }, 5000);
         }
     </script>
 
